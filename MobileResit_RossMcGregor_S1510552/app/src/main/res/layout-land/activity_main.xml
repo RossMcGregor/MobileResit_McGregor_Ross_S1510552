@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Mobile Resit Ross McGregor S1510552-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/GlasgowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="362dp"
+        android:text="Glasgow Weather" />
+
+    <Button
+        android:id="@+id/LondonButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="2dp"
+        android:text="London Weather" />
+
+
+    <Button
+        android:id="@+id/NewYorkButton"
+        android:layout_width="165dp"
+        android:layout_height="43dp"
+        android:layout_below="@+id/GlasgowButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-42dp"
+        android:layout_marginEnd="183dp"
+        android:text="New York Weather" />
+
+    <Button
+        android:id="@+id/OmanButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LondonButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        android:text="Oman Weather" />
+
+    <Button
+        android:id="@+id/MauritiusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/OmanButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-52dp"
+        android:layout_marginEnd="170dp"
+        android:text="Mauritius Weather" />
+
+    <Button
+        android:id="@+id/BangladeshButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/NewYorkButton"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="170dp"
+        android:text="Bangladesh Weather" />
+
+    <TextView
+        android:id="@+id/feedSuccess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/BangladeshButton"
+        android:layout_marginTop="-1dp"
+        android:text="" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="528dp"
+        android:layout_below="@id/feedSuccess"
+        android:layout_marginTop="5dp">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>
